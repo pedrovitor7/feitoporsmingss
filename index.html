@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosso Tempo</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+      color: #f2f2f2;
+      text-align: center;
+    }
+
+    section {
+      padding: 50px 16px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+
+    button {
+      padding: 12px 26px;
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    #historia, #carta, #final {
+      display: none;
+    }
+
+    .timeline {
+      margin-top: 40px;
+    }
+
+    .momento {
+      margin: 45px 0;
+      padding-left: 20px;
+      border-left: 2px solid #ffffff80;
+      text-align: left;
+    }
+
+    .momento span {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .momento p {
+      margin-top: 8px;
+      line-height: 1.6;
+    }
+
+    /* FOTOS */
+    .foto {
+      width: 100%;
+      max-width: 420px;
+      display: block;
+      margin: 0 auto 16px auto;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .foto:hover {
+      transform: scale(1.03);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.5);
+    }
+
+    .fotos-duplas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .fotos-duplas .foto {
+      width: 45%;
+      max-width: 200px;
+    }
+
+    footer {
+      padding: 40px 10px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    /* RESPONSIVO FINO (celular) */
+    @media (max-width: 480px) {
+      h1 { font-size: 22px; }
+      h2 { font-size: 18px; }
+
+      .momento {
+        padding-left: 14px;
+      }
+
+      .fotos-duplas .foto {
+        width: 90%;
+        max-width: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section id="inicio">
+    <h1>Entre todos os dias do mundo,</h1>
+    <h2>eu escolhi ficar nos seus.</h2>
+    <br><br>
+    <button onclick="mostrar()">Começar nossa história</button>
+  </section>
+
+  <section id="historia">
+    <h2>Nosso tempo</h2>
+
+    <div class="timeline">
+
+      <div class="momento">
+        <img src="img/1pn.jpg" class="foto">
+        <span>O começo</span>
+        <p>O dia em que tudo parecia comum, até você aparecer.</p>
+      </div>
+
+      <div class="momento">
+        <img src="img/1c.jpg" class="foto">
+        <span>Segundo encontro</span>
+        <p>O tempo já sabia antes de nós.</p>
+      </div>
+
+      <div class="momento">
+        <div class="fotos-duplas">
+          <img src="img/lipes.jpeg" class="foto">
+          <img src="img/lipes2.jpeg" class="foto">
+        </div>
+        <span>Hoje</span>
+        <p>Ainda aqui. Escolhendo você.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="carta">
+    <h2>Enquanto durar</h2>
+    <p>
+      Não prometo perfeição.<br>
+      Prometo presença.<br><br>
+
+      Prometo tentar, mesmo nos dias tortos.<br>
+      Prometo ficar.<br><br>
+
+      Se o tempo é tudo que temos,<br>
+      então que seja nosso.
+    </p>
+  </section>
+
+  <section id="final">
+    <h2>O que vem depois?</h2>
+    <p>Não sei.</p>
+    <p>Mas quero descobrir com você.</p>
+  </section>
+
+  <footer>
+    Feito com amor, coragem e um pouco de caos. Smings :
+
+  </footer>
+
+  <script>
+    function mostrar() {
+      document.getElementById("historia").style.display = "block";
+      document.getElementById("carta").style.display = "block";
+      document.getElementById("final").style.display = "block";
+
+      document.getElementById("historia").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  </script>
+
+</body>
+</html>
