@@ -288,11 +288,9 @@ setInterval(()=>{
   let d=new Date()-inicio;
   const dias=Math.floor(d/86400000);
   d%=86400000;
-  const horas=Math.floor(d/3600000);
-  d%=3600000;
-  const minutos=Math.floor(d/60000);
-  contador.innerText=
-    `Estamos escrevendo isso há ${dias} dias, ${horas} horas e ${minutos} minutos.`;
+
+  contador.innerHTML=
+    `Estamos escrevendo isso há ${dias} dias`;
 
   if(dias>=100) capsula.style.display="block";
 },1000);
@@ -308,7 +306,7 @@ document.querySelectorAll(".momento").forEach(m=>{
 // TEXTO DIGITADO
 const textos=[
   "Seu jeito quando ri sem perceber.",
-  "A calma que você traz.",
+  
   "O mundo ficando mais leve perto de você.",
   "Você."
 ];
